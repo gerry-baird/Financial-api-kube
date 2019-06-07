@@ -7,10 +7,10 @@ spec:
   template:
     metadata:
       labels:
-        run: budget-api
+        run: budget-api-test
     spec:
       containers:
-      - name: budget-api
+      - name: budget-api-test
         image: gerrybaird/financial-api:11
         ports:
         - containerPort: 3000
@@ -23,10 +23,10 @@ metadata:
     service.kubernetes.io/ibm-load-balancer-cloud-provider-ip-type: public
     service.kubernetes.io/ibm-load-balancer-cloud-provider-vlan: "2607311"
   labels:
-    run: budget-api
+    run: budget-api-test
 spec:
   selector:
-    run: budget-api
+    run: budget-api-test
   type: LoadBalancer
   ports:
    - protocol: TCP
