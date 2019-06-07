@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: budget-api
 spec:
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: budget-api
-        image: gerrybaird/financial-api:8
+        image: gerrybaird/financial-api:10
         ports:
         - containerPort: 3000
 ---
